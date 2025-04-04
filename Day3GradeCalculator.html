@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>This is your Grade calculator</h2>
+    <p>Tap to button Calculate your grade </p>
+    <button onclick="call()">Start</button>
+
+
+    <script>
+    function Grade(marks) {
+        let grade;
+        switch (true) {
+            case (marks >= 90):
+                grade = "A+";
+                alert("Your Grade is A+.");
+                break;
+            case (marks >= 80):
+                grade = "A";
+                alert("Your Grade is A.");
+                break;
+            case (marks >= 70):
+                grade = "B";
+                alert("Your Grade is B.");
+                break;
+            case (marks >= 60):
+                grade = "C";
+                alert("Your Grade is C.");
+                break;
+            case (marks >= 50):
+                grade = "D";
+                alert("Your Grade is D.");
+                break;
+            default:
+                grade = "F";
+                alert("Your Grade is F.");
+        }
+        return grade;
+    }
+
+    function call(){
+        let marks = prompt("Enter your marks (0-100): ");
+    console.log(`Your grade is: ${Grade(marks)}`);
+    }
+    
+    </script>
+</body>
+</html>

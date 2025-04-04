@@ -1,0 +1,134 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #141E30, #243B55);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    width: 100%;
+    max-width: 500px; /* Increased max-width */
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Added spacing */
+    padding-right: 15px;
+}
+
+/* Label Wrapper */
+.label-wrapper {
+    font-weight: 500;
+    color: #ddd;
+    font-size: 15px;
+}
+
+/* Input and Textarea */
+input, textarea {
+    width: 100%;
+    padding: 14px; 
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid transparent;
+    border-radius: 8px; 
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Focus Effects */
+input:focus, textarea:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px; /* Increased height */
+}
+
+/* Button Styling */
+button {
+    padding: 14px;
+    background: cyan;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effects */
+button:hover {
+    background: #00bcd4;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+
+/* Placeholder Color */
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .contact-form-container {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
